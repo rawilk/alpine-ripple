@@ -1,5 +1,12 @@
 import { getCustomColorFromModifiers, getCustomRadiusFromModifiers, willHaveAMouseUpEvent } from './utils';
 
+/**
+ * Add a ripple effect to the element.
+ *
+ * @param {MouseEvent} event
+ * @param {HTMLElement} el
+ * @param {Array} modifiers
+ */
 export const addRipple = (event, el, modifiers) => {
     if (! willHaveAMouseUpEvent(event)) {
         return;
