@@ -2,7 +2,7 @@
     "name": "alpine-ripple",
     "version": "1.0.0",
     "description": "Ripple effect (materialize) for Alpine.js.",
-    "main": "index.js",
+    "main": "src/js/ripple.js",
     "scripts": {
     },
     "repository": {
