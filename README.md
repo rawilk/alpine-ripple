@@ -24,10 +24,10 @@ Include the following `<script>` and `<link>` tags in the `<head>` of your docum
 ```html
 <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/wilkr/alpine-ripple@1.x.x/dist/alpine-ripple.css"
+    href="https://cdn.jsdelivr.net/npm/@wilkr/alpine-ripple@1.x.x/dist/alpine-ripple.css"
 />
 <script
-    src="https://cdn.jsdelivr.net/npm/wilkr/alpine-ripple@1.x.x/dist/alpine-ripple.min.js"
+    src="https://cdn.jsdelivr.net/npm/@wilkr/alpine-ripple@1.x.x/dist/alpine-ripple.min.js"
     defer
 ></script>
 ```
@@ -35,16 +35,16 @@ Include the following `<script>` and `<link>` tags in the `<head>` of your docum
 ### NPM
 
 ```bash
-npm i -S alpine-ripple
+npm i -S @wilkr/alpine-ripple
 ```
 
 Add the `x-ripple` directive to your project by importing the package.
 
 ```js
 import Alpine from "alpinejs";
-import ripple from "alpine-ripple";
+import Ripple from "@wilkr/alpine-ripple";
 
-Alpine.plugin(ripple);
+Alpine.plugin(Ripple);
 
 window.Alpine = Alpine;
 window.Alpine.start();
@@ -53,7 +53,7 @@ window.Alpine.start();
 Import the package styles into your css.
 
 ```css
-@import "alpine-ripple/dist/alpine-ripple.css";
+@import "@wilkr/alpine-ripple/dist/alpine-ripple.css";
 ```
 
 ## Usage
@@ -177,7 +177,7 @@ It is possible to chain multiple modifiers onto the `x-ripple` directive. Here i
 If you are using the `npm` installation method for this package, you can use the `Ripple.configure()` method to set configuration options. The following example shows all the configuration options you can set:
 
 ```js
-import Ripple from "alpine-ripple";
+import Ripple from "@wilkr/alpine-ripple";
 
 Alpine.plugin(
     Ripple.configure({
