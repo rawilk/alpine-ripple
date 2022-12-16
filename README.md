@@ -10,6 +10,11 @@
 
 `alpine-ripple` is a simple Alpine.js plugin that adds a ripple effect to any element with an alpine directive `x-ripple`.
 
+## Requirements
+
+- Alpine.js v3.x
+- Tailwind CSS (only required if you want to use custom color classes on the directive)
+
 ## Installation
 
 ### CDN
