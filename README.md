@@ -1,5 +1,7 @@
 # alpine-ripple
 
+![social image](https://banners.beyondco.de/alpine-ripple.png?theme=light&packageManager=npm+install&packageName=alpine-ripple&pattern=bubbles&style=style_1&description=Ripple+effect+%28materialize%29+for+Alpine.js.&md=1&showWatermark=0&fontSize=100px&images=sparkles)
+
 `alpine-ripple` is a simple Alpine.js plugin that adds a ripple effect to any element with an alpine directive `x-ripple`.
 
 ## Installation
