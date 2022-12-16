@@ -173,14 +173,17 @@ It is possible to chain multiple modifiers onto the `x-ripple` directive. Here i
 ```
 
 ## Configuration
+
 If you are using the `npm` installation method for this package, you can use the `Ripple.configure()` method to set configuration options. The following example shows all the configuration options you can set:
 
 ```js
-import Ripple from 'alpine-ripple';
+import Ripple from "alpine-ripple";
 
-Alpine.plugin(Ripple.configure({
-    class: 'ripple', // Allows you to specify your own class or classes for the ripple element.
-}));
+Alpine.plugin(
+    Ripple.configure({
+        class: "ripple", // Allows you to specify your own class or classes for the ripple element.
+    })
+);
 ```
 
 ## Changelog
