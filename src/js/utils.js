@@ -35,6 +35,23 @@ export const getCustomRadiusFromModifiers = modifiers => {
 }
 
 /**
+ * Convert an object of style properties to a string of CSS.
+ *
+ * @param {Object} styles
+ * @returns {string}
+ */
+export const toStyles = styles => Object.entries(styles).map(([key, value]) => `${formatStyleKey(key)}: ${value}`).join(';');
+
+/**
+ * Convert a style key to a CSS property.
+ * Example: backgroundColor -> background-color
+ *
+ * @param {string} key
+ * @returns {string}
+ */
+const formatStyleKey = key => key.replace(/([A-Z])/g, '-$1').toLowerCase();
+
+/**
  * Some events, such as a right click or ctrl + left click won't trigger a mouseup event,
  * so we need to prevent the ripple from being added in those cases.
  *

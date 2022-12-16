@@ -4,6 +4,8 @@
     "description": "Ripple effect (materialize) for Alpine.js.",
     "main": "src/js/ripple.js",
     "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup -c -w"
     },
     "repository": {
         "type": "git",
@@ -14,5 +16,14 @@
     "bugs": {
         "url": "https://github.com/rawilk/alpine-ripple/issues"
     },
-    "homepage": "https://github.com/rawilk/alpine-ripple#readme"
+    "homepage": "https://github.com/rawilk/alpine-ripple#readme",
+    "devDependencies": {
+        "@babel/core": "^7.20.5",
+        "@babel/preset-env": "^7.20.2",
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "rollup": "^2.79.1",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-filesize": "^9.1.2",
+        "rollup-plugin-import-css": "^3.1.0"
+    }
 }

@@ -1,3 +1,10 @@
+:root {
+    --ripple-color: #fff;
+    --ripple-radius: 9999px;
+    --ripple-duration: 600ms;
+    --ripple-timing-function: linear;
+}
+
 .ripple {
     position: absolute;
     top: 0;
@@ -8,11 +15,11 @@
 
 .ripple span {
     position: absolute;
-    border-radius: 9999px;
+    border-radius: var(--ripple-radius);
     opacity: 0.5;
-    background: #fff;
+    background: var(--ripple-color);
     transform: scale(0);
-    animation: ripple 600ms linear;
+    animation: ripple var(--ripple-duration) var(--ripple-timing-function);
 }
 
 @keyframes ripple {

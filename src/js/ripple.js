@@ -1,4 +1,4 @@
-import { getCustomColorFromModifiers, getCustomRadiusFromModifiers, willHaveAMouseUpEvent } from './utils';
+import { getCustomColorFromModifiers, getCustomRadiusFromModifiers, willHaveAMouseUpEvent, toStyles } from './utils';
 
 /**
  * Add a ripple effect to the element.
@@ -12,7 +12,7 @@ export const addRipple = (event, el, modifiers) => {
         return;
     }
 
-    const ripple = document.createElement('div');
+    const ripple = document.createElement('span');
     ripple.classList.add('ripple');
 
     el.appendChild(ripple);
@@ -24,23 +24,28 @@ export const addRipple = (event, el, modifiers) => {
     const x = event.pageX - position.left - (size / 2),
         y = event.pageY - position.top - (size / 2);
 
-    let style = `top: ${y}px; left: ${x}px; width: ${size}px; height: ${size}px;`;
+    const style = {
+        top: `${y}px`,
+        left: `${x}px`,
+        width: `${size}px`,
+        height: `${size}px`,
+    };
 
     const color = getCustomColorFromModifiers(modifiers);
     if (color.indexOf('bg-') === 0) {
-        // Prefix with '!' for !important.
+        // Prefix with '!' for !important (requires Tailwind).
         innerRipple.classList.add(`!${color}`);
     } else if (color.indexOf('#') === 0 || color.indexOf('rgb') === 0) {
-        style += `background-color: ${color};`;
+        style['--ripple-color'] = color;
     }
 
     const radius = getCustomRadiusFromModifiers(modifiers);
     if (radius) {
-        style += `border-radius: ${radius};`;
+        style['--ripple-radius'] = radius;
     }
 
     ripple.appendChild(innerRipple);
-    innerRipple.setAttribute('style', style);
+    innerRipple.setAttribute('style', toStyles(style));
 };
 
 /**
