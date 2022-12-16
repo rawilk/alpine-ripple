@@ -1,6 +1,7 @@
 import { getCustomColorFromModifiers, getCustomRadiusFromModifiers, willHaveAMouseUpEvent, toStyles } from './utils';
 
 let rippleClass = 'ripple';
+let removeTimeout = 1000;
 
 /**
  * Add a ripple effect to the element.
@@ -62,7 +63,7 @@ export const removeRipple = el => {
         const ripple = el.querySelector(`.${rippleClass.replace(' ', '.')}`);
 
         ripple && ripple.remove();
-    }, 1000);
+    }, removeTimeout);
 };
 
 function Ripple(Alpine) {
@@ -83,6 +84,10 @@ function Ripple(Alpine) {
 Ripple.configure = config => {
     if (config.hasOwnProperty('class') && typeof config.class === 'string') {
         rippleClass = config.class;
+    }
+
+    if (config.hasOwnProperty('removeTimeout') && typeof config.removeTimeout === 'number') {
+        removeTimeout = config.removeTimeout;
     }
 
     return Ripple;

@@ -182,6 +182,7 @@ import Ripple from "alpine-ripple";
 Alpine.plugin(
     Ripple.configure({
         class: "ripple", // Allows you to specify your own class or classes for the ripple element.
+        removeTimeout: 1000, // Allows you to specify how long the ripple element should remain on the page after the animation has finished.
     })
 );
 ```
