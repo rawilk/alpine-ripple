@@ -3,7 +3,7 @@
 # alpine-ripple
 
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/rawilk/alpine-ripple?label=version&style=flat-square)
-![Npm downloads](https://img.shields.io/npm/dt/alpine-ripple?style=flat-square)
+![Npm downloads](https://img.shields.io/npm/dt/@wilkr/alpine-ripple?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/rawilk/alpine-ripple?style=flat-square)
 
 ![social image](https://banners.beyondco.de/alpine-ripple.png?theme=light&packageManager=npm+install&packageName=%40wilkr%2Falpine-ripple&pattern=bubbles&style=style_1&description=Ripple+effect+%28materialize%29+for+Alpine.js.&md=1&showWatermark=0&fontSize=100px&images=sparkles)
