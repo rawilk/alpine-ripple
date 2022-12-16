@@ -1,3 +1,5 @@
+> ✨ Help support the maintenance of this package by [sponsoring me](https://github.com/sponsors/rawilk).
+
 # alpine-ripple
 
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/rawilk/alpine-ripple?label=version&style=flat-square)
