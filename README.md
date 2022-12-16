@@ -172,6 +172,17 @@ It is possible to chain multiple modifiers onto the `x-ripple` directive. Here i
 <button x-data x-ripple.color.#ff0000.radius.25%>Click me</button>
 ```
 
+## Configuration
+If you are using the `npm` installation method for this package, you can use the `Ripple.configure()` method to set configuration options. The following example shows all the configuration options you can set:
+
+```js
+import Ripple from 'alpine-ripple';
+
+Alpine.plugin(Ripple.configure({
+    class: 'ripple', // Allows you to specify your own class or classes for the ripple element.
+}));
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

@@ -1,5 +1,7 @@
 import { getCustomColorFromModifiers, getCustomRadiusFromModifiers, willHaveAMouseUpEvent, toStyles } from './utils';
 
+let rippleClass = 'ripple';
+
 /**
  * Add a ripple effect to the element.
  *
@@ -13,7 +15,7 @@ export const addRipple = (event, el, modifiers) => {
     }
 
     const ripple = document.createElement('span');
-    ripple.classList.add('ripple');
+    rippleClass.split(' ').forEach(className => ripple.classList.add(className));
 
     el.appendChild(ripple);
 
@@ -57,7 +59,7 @@ export const removeRipple = el => {
     setTimeout(() => {
         // We are only removing the first instance to prevent ripples from subsequent clicks
         // being removed too quickly before the ripple effect can properly be seen.
-        const ripple = el.querySelector('.ripple');
+        const ripple = el.querySelector(`.${rippleClass.replace(' ', '.')}`);
 
         ripple && ripple.remove();
     }, 1000);
@@ -77,5 +79,13 @@ function Ripple(Alpine) {
         });
     });
 }
+
+Ripple.configure = config => {
+    if (config.hasOwnProperty('class') && typeof config.class === 'string') {
+        rippleClass = config.class;
+    }
+
+    return Ripple;
+};
 
 export default Ripple;

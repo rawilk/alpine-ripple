@@ -56,7 +56,9 @@ const willHaveAMouseUpEvent = event => {
     return false;
   }
   return event.button === 0 || event.button === 1;
-};/**
+};let rippleClass = 'ripple';
+
+/**
  * Add a ripple effect to the element.
  *
  * @param {MouseEvent} event
@@ -68,7 +70,7 @@ const addRipple = (event, el, modifiers) => {
     return;
   }
   const ripple = document.createElement('span');
-  ripple.classList.add('ripple');
+  rippleClass.split(' ').forEach(className => ripple.classList.add(className));
   el.appendChild(ripple);
   const size = ripple.offsetWidth,
     position = ripple.getBoundingClientRect(),
@@ -105,7 +107,7 @@ const removeRipple = el => {
   setTimeout(() => {
     // We are only removing the first instance to prevent ripples from subsequent clicks
     // being removed too quickly before the ripple effect can properly be seen.
-    const ripple = el.querySelector('.ripple');
+    const ripple = el.querySelector(`.${rippleClass.replace(' ', '.')}`);
     ripple && ripple.remove();
   }, 1000);
 };
@@ -125,6 +127,12 @@ function Ripple(Alpine) {
       el.removeEventListener('mouseup', mouseUpHandler);
     });
   });
-}document.addEventListener('alpine:initializing', () => {
+}
+Ripple.configure = config => {
+  if (config.hasOwnProperty('class') && typeof config.class === 'string') {
+    rippleClass = config.class;
+  }
+  return Ripple;
+};document.addEventListener('alpine:initializing', () => {
   Ripple(window.Alpine);
 });}));//# sourceMappingURL=alpine-ripple.js.map
