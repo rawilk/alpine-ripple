@@ -131,6 +131,13 @@ If you want to change the timing function globally, you can do so by setting the
 }
 ```
 
+## Advanced Usage
+It is possible to chain multiple modifiers onto the `x-ripple` directive. Here is an example of changing the color to red, and the radius to 25%.
+
+```html
+<button x-data x-ripple.color.#ff0000.radius.25%>Click me</button>
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
