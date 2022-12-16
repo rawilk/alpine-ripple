@@ -57,6 +57,7 @@ const willHaveAMouseUpEvent = event => {
   }
   return event.button === 0 || event.button === 1;
 };let rippleClass = 'ripple';
+let removeTimeout = 1000;
 
 /**
  * Add a ripple effect to the element.
@@ -109,7 +110,7 @@ const removeRipple = el => {
     // being removed too quickly before the ripple effect can properly be seen.
     const ripple = el.querySelector(`.${rippleClass.replace(' ', '.')}`);
     ripple && ripple.remove();
-  }, 1000);
+  }, removeTimeout);
 };
 function Ripple(Alpine) {
   Alpine.directive('ripple', (el, {
@@ -131,6 +132,9 @@ function Ripple(Alpine) {
 Ripple.configure = config => {
   if (config.hasOwnProperty('class') && typeof config.class === 'string') {
     rippleClass = config.class;
+  }
+  if (config.hasOwnProperty('removeTimeout') && typeof config.removeTimeout === 'number') {
+    removeTimeout = config.removeTimeout;
   }
   return Ripple;
 };document.addEventListener('alpine:initializing', () => {
