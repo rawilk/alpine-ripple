@@ -14,7 +14,7 @@ Include the following `<script>` and `<link>` tags in the `<head>` of your docum
     href="https://cdn.jsdelivr.net/npm/wilkr/alpine-ripple@1.x.x/dist/alpine-ripple.css"
 />
 <script
-    src="https://cdn.jsdelivr.net/npm/wilkr/alpine-ripple@1.x.x/dist/alpine-ripple.js"
+    src="https://cdn.jsdelivr.net/npm/wilkr/alpine-ripple@1.x.x/dist/alpine-ripple.min.js"
     defer
 ></script>
 ```
