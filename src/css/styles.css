@@ -11,6 +11,8 @@
     left: 0;
     bottom: 0;
     right: 0;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .ripple span {
