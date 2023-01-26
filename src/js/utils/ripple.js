@@ -40,8 +40,6 @@ export const startRipple = (event, el, options = {}) => {
         rippleSize = Math.sqrt(sizeX ** 2 + sizeY ** 2);
     }
 
-    // Touch devices need a small delay to avoid the keyboard from hiding.
-
     return {
         width: `${rippleSize}px`,
         height: `${rippleSize}px`,
