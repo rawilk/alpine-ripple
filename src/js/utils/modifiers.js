@@ -1,3 +1,9 @@
+/**
+ * Return a user defined custom color for the ripple effect.
+ *
+ * @param {Array} modifiers
+ * @returns {string}
+ */
 export const getCustomColorFromModifiers = modifiers => {
     if (! modifiers.includes('color')) {
         return '';
@@ -13,6 +19,12 @@ export const getCustomColorFromModifiers = modifiers => {
         : `bg-${nextModifier}`;
 };
 
+/**
+ * Return a user defined custom radius for the ripple effect.
+ *
+ * @param {Array} modifiers
+ * @returns {string}
+ */
 export const getCustomRadiusFromModifiers = modifiers => {
     if (! modifiers.includes('radius')) {
         return '';
@@ -33,35 +45,3 @@ export const getCustomRadiusFromModifiers = modifiers => {
 
     return `${numericValue}${unit}`;
 }
-
-/**
- * Convert an object of style properties to a string of CSS.
- *
- * @param {Object} styles
- * @returns {string}
- */
-export const toStyles = styles => Object.entries(styles).map(([key, value]) => `${formatStyleKey(key)}: ${value}`).join(';');
-
-/**
- * Convert a style key to a CSS property.
- * Example: backgroundColor -> background-color
- *
- * @param {string} key
- * @returns {string}
- */
-const formatStyleKey = key => key.replace(/([A-Z])/g, '-$1').toLowerCase();
-
-/**
- * Some events, such as a right click or ctrl + left click won't trigger a mouseup event,
- * so we need to prevent the ripple from being added in those cases.
- *
- * @param {MouseEvent} event
- * @returns {boolean}
- */
-export const willHaveAMouseUpEvent = event => {
-    if (event.ctrlKey) {
-        return false;
-    }
-
-    return event.button === 0 || event.button === 1;
-};
