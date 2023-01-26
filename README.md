@@ -58,6 +58,8 @@ Import the package styles into your css.
 
 ## Usage
 
+> **Note:** Documentation for the `x-ripple-focus` directive coming soon.
+
 Add the `x-ripple` directive to any element, which in most cases will be a `<button>`.
 
 ```html
