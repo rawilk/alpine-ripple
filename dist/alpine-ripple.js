@@ -112,9 +112,6 @@ const getCustomRadiusFromModifiers = modifiers => {
       sizeY = Math.max(Math.abs((el ? el.clientHeight : 0) - rippleY), rippleY) * 2 + 2;
     rippleSize = Math.sqrt(sizeX ** 2 + sizeY ** 2);
   }
-
-  // Touch devices need a small delay to avoid the keyboard from hiding.
-
   return {
     width: `${rippleSize}px`,
     height: `${rippleSize}px`,
