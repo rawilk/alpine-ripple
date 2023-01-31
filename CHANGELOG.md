@@ -2,6 +2,15 @@
 
 All notable changes to `alpine-ripple` will be documented in this file.
 
+## v1.1.1 - 2023-01-31
+
+### What's Changed
+
+- Bump dependabot/fetch-metadata from 1.3.5 to 1.3.6 by @dependabot in https://github.com/rawilk/alpine-ripple/pull/3
+- Make ripple click effect inherit border radius from its parent element
+
+**Full Changelog**: https://github.com/rawilk/alpine-ripple/compare/v1.1.0...v1.1.1
+
 ## v1.1.0 - 2023-01-26
 
 ### What's Changed
