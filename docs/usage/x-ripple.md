@@ -22,7 +22,7 @@ changed globally or on a per-element basis.
 
 ## Options
 
-Certain aspects of the ripple effect can be customized for this package. Some options can be set [globally via CSS](/docs/alpine-ripple/{version}/usages/global-customization), or on a per-element basis.
+Certain aspects of the ripple effect can be customized for this package. Some options can be set [globally via CSS](/docs/alpine-ripple/{version}/usage/global-customization), or on a per-element basis.
 
 ### Color
 
