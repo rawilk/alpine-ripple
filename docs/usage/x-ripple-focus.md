@@ -9,9 +9,7 @@ The `x-ripple-focus` directive can be attached to an element to provide a pulsat
 with the `x-ripple` directive, and can be used in conjunction with it.
 
 ```html
-<button x-data x-ripple-focus>
-    Focus me
-</button>
+<button x-data x-ripple-focus>Focus me</button>
 ```
 
 When this button is focused, it will show a pulsating ripple effect.
@@ -28,17 +26,13 @@ Certain aspects of the ripple focus effect can be customized for this package. S
 By default, the ripple focus color is white, which should work in most cases. However, if you want to change the color, you can do so with a `color` modifier.
 
 ```html
-<button x-data x-ripple-focus.color.#000>
-    Focus me
-</button>
+<button x-data x-ripple-focus.color.#000>Focus me</button>
 ```
 
 This will result in a black ripple focus effect when the button is focused. If you're using Tailwind, you may define a color class and use that instead.
 
 ```html
-<button x-data x-ripple-focus.color.green-500>
-    Focus me
-</button>
+<button x-data x-ripple-focus.color.green-500>Focus me</button>
 ```
 
 This will result in the ripple focus element getting the `!bg-green-500` class added to it. `!` is added to the class to specify that it is important,

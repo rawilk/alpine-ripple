@@ -9,16 +9,16 @@ If you are using the [npm installation](/docs/alpine-ripple/{version}/installati
 In the example below, we will show the configuration options you may set, separated out by directive.
 
 ```js
-import Ripple from '@wilkr/alpine-ripple';
+import Ripple from "@wilkr/alpine-ripple";
 
 Alpine.plugin(
     Ripple.configure({
         /**
          * x-ripple
          */
-        
+
         // Specify your own class(es) for the ripple element.
-        class: 'ripple',
+        class: "ripple",
 
         // Specify how long the ripple element should remain on the page
         // after the animation has finished.
@@ -27,13 +27,13 @@ Alpine.plugin(
         /**
          * x-ripple-focus
          */
-        
+
         // Specify your own class(es) for the ripple focus element.
-        focusClass: 'ripple-focus',
-        
+        focusClass: "ripple-focus",
+
         // Specify your own class(es) for the root element when it is focused.
         // The directive will use this class to determine when the element is focused.
-        focusedClass: 'ripple-focus-active',
+        focusedClass: "ripple-focus-active",
     })
 );
 ```

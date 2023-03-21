@@ -9,16 +9,14 @@ sort: 1
 is adding a ripple effect to a button when it is clicked on.
 
 ```html
-<button type="button" x-data x-ripple>
-    Click me
-</button>
+<button type="button" x-data x-ripple>Click me</button>
 ```
 
 ## Alternatives
 
 Currently, there doesn't seem to be many alternatives, however more can be added here if they are found.
 
-- [alHasandev/tailwind-button](https://github.com/alHasandev/tailwind-button)
+-   [alHasandev/tailwind-button](https://github.com/alHasandev/tailwind-button)
 
 ## Disclaimer
 

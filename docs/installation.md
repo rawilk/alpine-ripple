@@ -16,8 +16,8 @@ npm i -S @wilkr/alpine-ripple
 Add the `x-ripple` and `x-ripple-focus` directives to your project by importing the package.
 
 ```js
-import Alpine from 'alpinejs';
-import Ripple from '@wilkr/alpine-ripple';
+import Alpine from "alpinejs";
+import Ripple from "@wilkr/alpine-ripple";
 
 Alpine.plugin(Ripple);
 
@@ -28,7 +28,7 @@ window.Alpine.start();
 Import the package styles into your CSS.
 
 ```css
-@import '@wilkr/alpine-ripple/dist/alpine-ripple.css';
+@import "@wilkr/alpine-ripple/dist/alpine-ripple.css";
 ```
 
 ### CDN
