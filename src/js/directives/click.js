@@ -144,14 +144,15 @@ export default (Alpine, rippleConfig) => {
         const mouseUpHandler = () => removeRipple(el, true);
         const keydownHandler = event => handleRippleKeydown(event, el, modifiers);
         const keyupHandler = event => isEnterOrSpace(event) && removeRipple(el, false);
+        const passiveOptions = { passive: true };
 
         el.addEventListener('mousedown', clickHandler);
         el.addEventListener('mouseup', mouseUpHandler);
         el.addEventListener('mouseleave', mouseUpHandler);
         el.addEventListener('contextmenu', mouseUpHandler);
-        el.addEventListener('touchstart', clickHandler);
+        el.addEventListener('touchstart', clickHandler, passiveOptions);
         el.addEventListener('touchend', mouseUpHandler);
-        el.addEventListener('touchmove', mouseUpHandler);
+        el.addEventListener('touchmove', mouseUpHandler, passiveOptions);
         el.addEventListener('dragleave', mouseUpHandler);
         el.addEventListener('keydown', keydownHandler);
         el.addEventListener('keyup', keyupHandler);
@@ -161,9 +162,9 @@ export default (Alpine, rippleConfig) => {
             el.removeEventListener('mouseup', mouseUpHandler);
             el.removeEventListener('mouseleave', mouseUpHandler);
             el.removeEventListener('contextmenu', mouseUpHandler);
-            el.removeEventListener('touchstart', clickHandler);
+            el.removeEventListener('touchstart', clickHandler, passiveOptions);
             el.removeEventListener('touchend', mouseUpHandler);
-            el.removeEventListener('touchmove', mouseUpHandler);
+            el.removeEventListener('touchmove', mouseUpHandler, passiveOptions);
             el.removeEventListener('dragleave', mouseUpHandler);
             el.removeEventListener('keydown', keydownHandler);
             el.removeEventListener('keyup', keyupHandler);
