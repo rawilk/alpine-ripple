@@ -24,7 +24,7 @@
         "materialize"
     ],
     "devDependencies": {
-        "@babel/core": "^7.20.5",
+        "@babel/core": "^8.0.6",
         "@babel/preset-env": "^7.20.2",
         "@rollup/plugin-node-resolve": "^16.0.1",
         "rollup": "^4.36.0",
